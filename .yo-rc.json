@@ -44,7 +44,9 @@
     "clientTheme": "none",
     "clientThemeVariant": "",
     "reactive": false,
-    "enableGradleEnterprise": false
+    "enableGradleEnterprise": false,
+    "entities": ["Routine", "Excercise", "Cycle"],
+    "lastLiquibaseTimestamp": 1636376169000
   },
   "git-provider": "GitHub",
   "git-company": "armper",
