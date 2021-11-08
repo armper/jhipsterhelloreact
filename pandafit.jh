@@ -1,0 +1,33 @@
+entity Routine {
+  name String
+dateStarted LocalDate
+dateEnded LocalDate
+goalDate LocalDate
+
+startingBodyWeight Integer
+endingBodyWeight Integer
+}
+
+
+relationship ManyToMany {
+  Routine{user} to User{routine}
+}
+entity Excercise {
+  type ExcerciseType
+currentVolume Integer
+startingVolume Integer
+goalVolume Integer
+}
+enum ExcerciseType {
+  BARBELL
+  BAR
+  MACHINE
+}
+entity Cycle {
+  reps Integer
+volume Integer
+}
+relationship OneToMany {
+  Routine to Excercise
+    Excercise to Cycle
+}
